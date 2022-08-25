@@ -57,3 +57,21 @@ img {
     max-width: 1200px;
   }
 }
+
+.section__title {
+  color: $font-secondary-black;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.27;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  &--white {
+    color: $font-main-color;
+  }
+}
