@@ -21,11 +21,79 @@
   border-radius: 10px;
   border: 2px solid $btn-primary;
 
-  &--about {
+  &:hover {
+    background-color: $btn-focus;
+    border: 2px solid $btn-focus;
+  }
+
+  &:active {
+    background-color: $btn-active;
+    border: 2px solid $btn-active;
+  }
+
+  &--small {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    min-width: 161px;
+    min-height: 49px;
+  }
+
+  &--medium {
     min-width: 168px;
   }
 
-  &--contacts {
-    min-width: 192px;
+  &--large {
+    font-weight: 700;
+    line-height: 1.14;
+    min-width: 176px;
+  }
+}
+
+.button-transp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 62px;
+  min-height: 24px;
+  padding: 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: transparent;
+  color: $font-secondary-black;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.17;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+
+  border-radius: 10px;
+  border: 2px solid $btn-primary;
+
+  &:hover {
+    border: 2px solid $btn-focus;
+  }
+
+  &:active {
+    border: 2px solid $btn-active;
+  }
+
+  &--medium {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    min-width: 138px;
+    min-height: 42px;
+  }
+
+  &--large {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    min-width: 161px;
+    min-height: 50px;
   }
 }
