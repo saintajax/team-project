@@ -1,0 +1,78 @@
+<header class="header" >
+  <div class="conteiner">
+    <nav class="nav" >
+      <a href="" class="logo">
+        <picture>
+          <source
+            srcset="
+              ./images/header/logo/mobile/logo-mobile.png    20w,
+              ./images/header/logo/mobile/logo-mobile@2x.png 39w,
+              ./images/header/logo/mobile/logo-mobile@3x.png 57w
+            "
+            media="(max-width:767px)"
+            type="image/png"
+            sizes="(max-width: 767px) 19px, 100vw"
+          />
+          <source
+            srcset="
+              ./images/header/logo/tablet/logo-tablet.png    24w,
+              ./images/header/logo/tablet/logo-tablet@2x.png 46w,
+              ./images/header/logo/tablet/logo-tablet@3x.png 68w
+            "
+            media="(min-width:768px) and (max-width:1199px)"
+            type="image/png"
+            sizes="(min-width:768px) and (max-width:1199px) 24px, 100vw"
+          />
+          <source
+            srcset="
+              ./images/header/logo/desktop/logo-desktop.png    29w,
+              ./images/header/logo/desktop/logo-desktop@2x.png 57w,
+              ./images/header/logo/desktop/logo-desktop@3x.png 85w
+            "
+            media="(min-width:1200px)"
+            type="image/png"
+            sizes="(min-width:1200px) 28px, 100vw"
+          />
+          <img
+            class="logo__image"
+            src="./images/header/logo/mobile/logo-mobile.png"
+            alt="logo123"
+          />
+        </picture>
+        <span class="logo__text">ce</span>
+      </a>
+      <button
+        class="btn--menu"
+        type="button"
+        aria-controls="menu-container"
+        aria-expanded="false"
+        id="btn-open"
+        data-menu-button>
+        <svg
+          class="icon-svg"
+          width="32"
+          height="32"
+          aria-label="Переключатель мобильного меню ">
+          <use
+            class="icon-cross"
+            href="./images/sprite.svg#icon-cross"
+          ></use>
+          <use
+            class="icon-menu"
+            href="./images/sprite.svg#icon-menu"
+          ></use>
+        </svg>
+      </button>
+      <div class="nav-menu" id="menu-container" data-menu>
+        <ul class="nav-menu__list list">
+          <li class="nav-menu__item"><a class="nav-menu__link link" href="">Home</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link link" href="">About us</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link link" href="">How it’s made?</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link link" href="">Our products</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link link" href="">Contact</a></li>
+        </ul>
+      </div>
+      <button class="button button--header" type="button" id="btn-buy">Buy now &#10095</button>
+    </nav>
+  </div>
+</header>
