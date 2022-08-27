@@ -3,32 +3,52 @@
   position: fixed;
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 95%;
+  height: unset;
   z-index: 30;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media screen and(max-height:710px) {
+    &::after{
+      content: "";
+      height: 50px;
+      width: 10px;
+      background-color: transparent;
+      display: block;
+      position: absolute;
+      top: 100%;
+    }
+  }
 
-  @media screen and (min-width: 480px) {
+  &--header{
+    background-image: url(../images/main/icecream-fon.svg);
+
+  }
+
+  @media screen and(min-width: 480px) {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 450px;
-    height: 609px;
-  }
 
-  @media screen and (min-width: 1200px) {
-    min-width: 528px;
-    min-height: 581px;
+  }
+  @media screen and(min-width: 480px) and (max-height: 899px){
+    top: 100px;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 528px;
+
   }
 }
 
-.icon-svg {
-  fill: currentColor;
-}
 
 /* close button  */
 .btn-close {
@@ -38,8 +58,6 @@
   @extend %flex;
 
   padding: 0px;
-  // margin-top: 8px;
-  // margin-right: 8px;
   width: 30px;
   height: 30px;
 
@@ -60,4 +78,133 @@
     border: 2px solid $btn-active;
   }
 
+}
+  
+
+
+// Стили для модального окна Header
+.client-form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-family: "Seymour One", sans-serif;
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $font-secondary-color;
+  }
+}
+
+.client-form__label {
+  // @extend %fonts-client-form__label;
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $font-secondary-color;
+
+  &:hover .client-form__input {
+    border-color: $btn-primary;
+  }
+  &.client-form__label--last {
+    margin-bottom: 20px;
+  }
+}
+.client-form__input {
+  margin-top: 4px;
+  padding: 12px 12px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: $font-secondary-color;
+  border: 2px solid $font-grey;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:active {
+    border-color: $btn-active;
+    outline: transparent;
+  }
+  &:hover {
+    border-color: $btn-focus;
+    outline: transparent;
+  }
+}
+
+.client-form__comment {
+  margin-top: 4px;
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  font-size: 16px;
+  border: 2px solid $font-grey;
+  border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: $btn-primary;
+    outline: transparent;
+  }
+
+  &:focus {
+    border-color: $btn-focus;
+    outline: transparent;
+  }
+  &:active {
+    border-color: $btn-active;
+    outline: transparent;
+  }
+}
+
+.client-form__label-policy {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: $font-secondary-color;
+
+  @media screen and(max-width: 1199px){
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+
+
+
+.client-form__icon-checkbox {
+  display: inline-block;
+  align-self: center;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $font-secondary-color;
+  border-radius: 2px;
+}
+.client-form__input-policy:checked + .client-form__icon-checkbox {
+  background-image: url(../images/icon-checkbox.svg);
+  background-size: contain;
+  background-color: #2196f3;
+  background-origin: border-box;
+  border-color: transparent;
+}
+.client-form__link-policy {
+  margin-left: 5px;
+  font-weight: 500;
+  color: #2196f3;
 }
