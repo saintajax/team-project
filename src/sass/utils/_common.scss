@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:wght@700&family=Roboto:wght@400;500;700&family=Seymour+One&display=swap');
 
 body {
-  background-color: $background-main;
+  // background-color: $background-main;
   color: $font-main-color;
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.04em;
@@ -44,17 +44,21 @@ img {
 .conteiner {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 480px;
   width: 100%;
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
