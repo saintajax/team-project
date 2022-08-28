@@ -24,11 +24,15 @@
     @media screen and (min-width: 768px) {
         width: 224px;
         min-height: 528px;
+        padding-right: 24px;
+        padding-left: 24px;
     }
     
     @media screen and (min-width: 1200px) {
         width: 368px;
         min-height: 538px;
+        padding-right: 40px;
+        padding-left: 40px;
         }
 
 }
@@ -199,8 +203,6 @@ margin-bottom: 8px;
     align-items: center;
     @media screen and (min-width: 768px) {
         margin-top: 60px;
-        padding-right: 24px;
-        padding-left: 24px;
         flex-direction: row;
         justify-content: center;
     }
