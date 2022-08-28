@@ -1,3 +1,10 @@
+.contacts {
+    padding-bottom: 32px;
+    @media screen and (min-width: 768px) {
+    padding-bottom: 40px;
+    }
+}
+
 .contacts__item {
     color: $font-secondary-black;
     width: 280px;
@@ -27,7 +34,7 @@
 }
 
 .contacts__list {
-    padding: -359px;
+    margin: -359px;
 
     margin-left: auto;
     margin-right: auto;
@@ -35,10 +42,10 @@
 
     @media screen and (min-width: 768px) {
     display: flex;
-    padding: -364px;
+    margin: -364px;
     }
     @media screen and (min-width: 1200px) {
-    padding: -156px;
+    margin: -156px;
     gap: 32px;
     display: flex;
     }
@@ -188,18 +195,18 @@ margin-bottom: 8px;
     display: flex;
     flex-direction: column;
     
-    padding-top: 32px;
-    padding-bottom: 16px;
+    margin-top: 32px;
     align-items: center;
     @media screen and (min-width: 768px) {
-        padding-top: 60px;
-        padding-bottom: 20px;
+        margin-top: 60px;
+        padding-right: 24px;
+        padding-left: 24px;
         flex-direction: row;
         justify-content: center;
     }
     @media screen and (min-width: 1200px) {
-        padding-top: 64px;
-        padding-bottom: 60px;
+        margin-top: 64px;
+        
     }
 }
 
@@ -223,9 +230,6 @@ margin-bottom: 8px;
         font-weight: 600;
         font-size: 14px;
         line-height: 1.29;
-
-        padding: 12px 37px;
-
      }
      @media screen and (min-width: 1200px) {
         margin-right: 18px;
