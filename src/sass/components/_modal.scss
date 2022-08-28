@@ -3,8 +3,6 @@
   position: fixed;
   opacity: 0;
   visibility: hidden;
-  // display: flex;
-  // flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -28,7 +26,7 @@
   }
 
   &--header{
-    background-image: url(../images/main/icecream-fon.svg);
+    background-image: url(../images/main/bg-ice.svg);
 
   }
 
@@ -102,7 +100,6 @@
 }
 
 .client-form__label {
-  // @extend %fonts-client-form__label;
   position: relative;
   display: flex;
   margin-bottom: 10px;
@@ -208,3 +205,6 @@
   font-weight: 500;
   color: #2196f3;
 }
+
+
+

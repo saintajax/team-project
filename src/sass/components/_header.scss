@@ -28,6 +28,7 @@
     }
     &__text {
       margin-left: -4px;
+      margin-bottom: -3px;
       font-family: "Seymour One", sans-serif;
       font-weight: 400;
       font-size: 14.8735px;
@@ -37,9 +38,11 @@
       color: transparent;
       @media screen and(min-width:768px) and(max-width:1199px) {
         font-size: 17.6875px;
+        margin-bottom: -4px;
       }
       @media screen and(min-width:1200px) {
         font-size: 21.7596px;
+        margin-bottom: -4px;
       }
     }
   }
@@ -195,39 +198,6 @@
     }
   }
   
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 150px;
-    height: 42px;
-    padding: 10px 10px;
-    margin-left: auto;
-    margin-right: auto;
-  
-    background-color: $btn-primary;
-    color: $font-secondary-black;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: 0em;
-    text-align: center;
-    cursor: pointer;
-  
-    border-radius: 10px;
-    border: 2px solid $btn-primary;
-  
-    &:hover {
-      background-color: $btn-focus;
-      border: 2px solid $btn-focus;
-    }
-  
-    &:active {
-      background-color: $btn-active;
-      border: 2px solid $btn-active;
-    }
-  }
   .button--header {
     margin: 0;
     @media screen and(max-width: 767px) {
@@ -246,3 +216,6 @@
     }
   }
   
+  .button__vector{
+    margin-left: 15px;
+  }
