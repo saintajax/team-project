@@ -173,14 +173,17 @@
     margin-top: -187%;
     background-image: url(../images/products1-mob.jpg);
 
+    @media screen and (max-width: $max320) {
+      margin-top: -197%;
+    }
     @media screen and (min-width: 355px) {
-      margin-top: -150%;
+      margin-top: -168%;
     }
-    @media screen and (max-width: 375px) {
-      margin-top: -140%;
+    @media screen and (min-width: 374px){
+      margin-top: -145%;
     }
-    @media screen and (min-width: 425px) {
-      margin-top: -111%;
+    @media screen and (min-width: 424px) {
+      margin-top: -122%;
     }
     @media screen and (min-width: 480px) {
       margin-top: -110%;
@@ -248,20 +251,20 @@
     background-image: url(../images/products2-mob.jpg);
 
     @media screen and (max-width: $max320) {
-      margin-top: -200%;
+      margin-top: -223%;
     }
 
     @media screen and (min-width: 355px) {
-      margin-top: -170%;
+      margin-top: -178%;
     }
-    @media screen and (max-width: 375px) {
-      margin-top: -157%;
+    @media screen and (min-width: 374px) {
+      margin-top: -165%;
     }
-    @media screen and (min-width: 425px) {
-      margin-top: -119%;
+    @media screen and (min-width: 424px) {
+      margin-top: -130%;
     }
     @media screen and (min-width: 480px) {
-      margin-top: -119%;
+      margin-top: -120%;
     }
 
     @media screen and (min-width: $min768) {
@@ -325,20 +328,20 @@
     background-image: url(../images/products3-mob.jpg);
 
     @media screen and (max-width: $max320) {
-      margin-top: -200%;
+      margin-top: -223%;
     }
 
     @media screen and (min-width: 355px) {
-      margin-top: -160%;
+      margin-top: -180%;
     }
-    @media screen and (max-width: 375px) {
-      margin-top: -148%;
+    @media screen and (min-width: 374px) {
+      margin-top: -155%;
     }
-    @media screen and (min-width: 425px) {
-      margin-top: -119%;
+    @media screen and (min-width: 424px) {
+      margin-top: -130%;
     }
     @media screen and (min-width: 480px) {
-      margin-top: -119%;
+      margin-top: -120%;
     }
 
     @media screen and (min-width: $min768) {
