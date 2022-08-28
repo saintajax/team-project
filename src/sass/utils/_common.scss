@@ -2,10 +2,10 @@
 
 body {
   background-color: $background-main;
-  color: $font-main-color;
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.04em;
 }
+
 
 img {
   display: block;
@@ -21,7 +21,7 @@ img {
 
 .link {
   text-decoration: none;
-}
+ }
 
 .visually-hidden {
   position: absolute;
