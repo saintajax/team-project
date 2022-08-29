@@ -15,8 +15,8 @@
   transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and(max-height:710px) {
-    &::after{
-      content: "";
+    &::after {
+      content: '';
       height: 50px;
       width: 10px;
       background-color: transparent;
@@ -26,12 +26,14 @@
     }
   }
 
+
   &--bg-ice{
     background-color: $background-secondary;
     background-image: url("../images/bg-ice.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
   }
 
   @media screen and(min-width: 480px) {
@@ -40,17 +42,14 @@
     left: 50%;
     transform: translate(-50%, 0);
     width: 450px;
-
   }
-  @media screen and(min-width: 480px) and (max-height: 899px){
+  @media screen and(min-width: 480px) and (max-height: 899px) {
     top: 100px;
   }
   @media screen and(min-width: 1200px) {
     width: 528px;
-
   }
 }
-
 
 /* close button  */
 .btn-close {
@@ -79,10 +78,7 @@
     background-color: $btn-active;
     border: 2px solid $btn-active;
   }
-
 }
-  
-
 
 // Стили для модального окна Header
 .client-form {
@@ -90,7 +86,7 @@
   display: flex;
   flex-direction: column;
   &__title {
-    font-family: "Seymour One", sans-serif;
+    font-family: 'Seymour One', sans-serif;
     margin: 0;
     margin-bottom: 12px;
     padding: 0;
@@ -180,13 +176,11 @@
   letter-spacing: 0.03em;
   color: $font-secondary-color;
 
-  @media screen and(max-width: 1199px){
+  @media screen and(max-width: 1199px) {
     font-weight: 400;
     font-size: 12px;
   }
 }
-
-
 
 .client-form__icon-checkbox {
   display: inline-block;
@@ -209,6 +203,8 @@
   font-weight: 500;
   color: #2196f3;
 }
+
+// modal map
 
 
 .modal-info {
@@ -253,6 +249,26 @@
     @media screen and (min-width: 1200px) {
       font-size: 16px;
     }
+
+//.modal-map-container {
+  width: 90%;
+  height: 40%;
+  @media screen and (min-width: 480px) {
+    width: 400px;
+    height: 300px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 600px;
+    height: 400px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 900px;
+    height: 600px;
+
   }
 }
 
+.modal-map {
+  width: 100%;
+  height: 100%;
+}//

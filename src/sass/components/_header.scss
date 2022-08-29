@@ -1,4 +1,5 @@
 .header {
+
   position: absolute;
   top: 0;
   left: 50%;
@@ -6,6 +7,7 @@
   transform: translateX(-50%);
   z-index: 10;
   background-color: transparent;
+
 }
 
 .logo {
@@ -13,6 +15,7 @@
   align-items: flex-end;
   text-decoration: none;
   padding: 12px 0;
+
   z-index: 20;
   @media screen and(min-width:768px) and(max-width:1199px) {
     padding-top: 20px;
@@ -21,6 +24,7 @@
   @media screen and(min-width:1200px) {
     padding: 17px 0;
   }
+
   &__image {
     @media screen and(max-width:767px) {
       width: 20px;
@@ -104,7 +108,9 @@
 
 .nav-menu {
   @media screen and(max-width:1199px) {
+
     position: absolute;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -113,7 +119,9 @@
     z-index: 10;
     // overflow-x: hidden;
 
+
     transform: translate(-100%);
+
     transition: 750ms cubic-bezier(0.4, 0, 0.2, 1);
     &.is-open {
       display: flex;
@@ -122,6 +130,7 @@
       transform: translateX(0);
     }
     @media screen and(max-width:767px) {
+
       padding-top: 84px;
 
     }
@@ -135,10 +144,12 @@
     }
     @media screen and(max-width:767px) and(max-height:375px) {
       padding-top: 40px;
+
       font-size: 32px;
     }
   }
   @media screen and(min-width: 1200px) {
+
     margin-left: auto;
   }
   &__list {
@@ -190,6 +201,7 @@
     @media screen and(max-height:415px) {
       font-size: 32px;
       padding: 13px 0;
+
     }
     @media screen and(max-height:319px) {
       font-size: 32px;
@@ -216,6 +228,7 @@
   @media screen and(min-width:1200px) {
     margin-left: 146px;
   }
+
 }
 
 .button__vector {
