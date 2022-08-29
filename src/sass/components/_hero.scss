@@ -1,10 +1,10 @@
 .hero {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
-  outline: 1px solid tomato;
+background-color: $background-main;
   width: 100%;
   @media screen and (max-width: 767px) {
     padding-top: 110px;
@@ -109,7 +109,7 @@
     @media screen and(min-width:768px) and(max-width:1199px) {
       width: 254px;
       right: 50%;
-      transform: translateX(calc(50% + 166px));
+      transform: translateX(calc(50% + 160px));
     }
     @media screen and(min-width:1200px) {
       width: 456px;
@@ -158,9 +158,9 @@
       width: 276px;
     }
     @media screen and(min-width:768px) and(max-width:1199px) {
-      bottom: -80px;
+      bottom: -70px;
       left: 50%;
-      transform: translateX(calc(-50% + 180px));
+      transform: translateX(calc(-50% + 170px));
       width: 379px;
     }
     @media screen and(min-width:1200px) {
