@@ -2,7 +2,11 @@
   background-color: $background-secondary;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/bgc-ice.svg);
+  background-image: url(../images/bg-ice.svg);
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 80px;
+  }
 }
 .products__title-group {
   margin-bottom: 148px;
