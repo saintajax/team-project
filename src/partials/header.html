@@ -47,12 +47,14 @@
         aria-controls="menu-container"
         aria-expanded="false"
         id="btn-open"
-        data-menu-button>
+        data-menu-button
+      >
         <svg
           class="icon-svg"
           width="32"
           height="32"
-          aria-label="Mobile menu switch ">
+          aria-label="Mobile menu switch "
+        >
           <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
           <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
         </svg>
@@ -82,7 +84,10 @@
         id="btn-buy"
         data-modal="header"
       >
-        Buy now <span class="arrow">&#10095</span>
+        Buy now
+        <svg class="button__icon" width="20" height="20">
+          <use href="./images/sprite.svg#chevron"></use>
+        </svg>
       </button>
     </nav>
   </div>
