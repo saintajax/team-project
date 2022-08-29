@@ -11,8 +11,10 @@
 }
 
 .modal.active,
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
+
+.overlay.active{
   position: fixed;
+   opacity: 1;
+   visibility: visible;
 }
+
