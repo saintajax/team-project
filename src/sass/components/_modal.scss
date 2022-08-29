@@ -26,14 +26,12 @@
     }
   }
 
-
   &--bg-ice {
     background-color: $background-secondary;
     background-image: url('../images/bg-ice.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
   }
 
   @media screen and(min-width: 480px) {
@@ -204,7 +202,7 @@
   color: #2196f3;
 }
 
-// modal map
+// modal about
 
 .modal-info {
   padding: 30px;
@@ -234,22 +232,24 @@
       line-height: 1.25;
       letter-spacing: 0.06em;
     }
+  }
 
-    &__text {
-      font-family: 'Montserrat';
-      font-size: 14px;
-      line-height: 1.76;
+  &__text {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 1.76;
 
-      text-align: center;
-      letter-spacing: 0.04em;
+    text-align: center;
+    letter-spacing: 0.04em;
 
-      color: #131313;
-      @media screen and (min-width: 1200px) {
-        font-size: 16px;
-      }
+    color: #131313;
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
     }
   }
 }
+
+// modal map
 .modal-map-container {
   width: 90%;
   height: 40%;
