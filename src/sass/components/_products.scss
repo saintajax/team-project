@@ -370,6 +370,14 @@
   }
 }
 
+.card__face--back {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
 .card-set__title {
   margin-top: 130px;
   margin-bottom: 40px;
@@ -465,14 +473,6 @@
   transform: perspective(600px) rotateY(-180deg);
 }
 
-.card-set__front.is-flipped2 {
-  transform: perspective(600px) rotateY(-180deg);
-}
-
-.card-set__front.is-flipped3 {
-  transform: perspective(600px) rotateY(-180deg);
-}
-
 .card-set__back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
@@ -512,22 +512,10 @@
   transform: rotateY(180deg);
 }
 
-// .card-set__front {
-//   transform: perspective(600px) rotateY(180deg);
-// }
-// .card-set__back {
-//   transform: perspective(600px) rotateY(0deg);
-// }
 .card-set__btn--front:hover .card-set__front {
   transform: perspective(600px) rotateY(-180deg);
 }
 
-// .card-set__btn--back .card-set__back {
-//   transform: perspective(600px) rotateY(0deg);
-// }
-// .card-set__btn--back .card-set__back {
-//   transform: perspective(600px) rotateY(-180deg);
-// }
 .card-set__item--first.card-set__back {
   @media screen and (max-width: $max768) {
     top: 15%;
