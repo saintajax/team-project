@@ -1,0 +1,140 @@
+.section.advantages {
+  background-color: $background-main;
+  padding-top: 0;
+  padding-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 204px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 209px;
+  }
+}
+
+.advantages__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 92px;
+  }
+}
+
+.advantages__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+}
+
+.advantages__item::before {
+  content: '';
+
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 40px;
+  }
+}
+
+.advantages__item--cow::before {
+  background-image: url('../images/cow-symbol.png');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/cow-symbol@2x.png');
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/cow-symbol@3x.png');
+  }
+}
+
+.advantages__item--weight::before {
+  background-image: url('../images/weight.png');
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/weight@2x.png');
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/weight@3x.png');
+  }
+}
+
+.advantages__item--ice::before {
+  background-image: url('../images/ice.png');
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/ice@2x.png');
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/ice@3x.png');
+  }
+}
+
+.advantages__numb {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.67;
+  letter-spacing: 0.04em;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 4px;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+    font-family: 'Montserrat';
+    font-size: 48px;
+    line-height: 1.23;
+
+    color: $background-secondary;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    line-height: 1.22;
+
+    color: $font-main-color;
+  }
+}
+
+.advantages__text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+
+  @media screen and (min-width: 768px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.74;
+
+    color: $background-secondary;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.76;
+
+    letter-spacing: 0.02em;
+
+    color: $font-main-color;
+  }
+}
