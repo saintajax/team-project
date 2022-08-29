@@ -1,6 +1,7 @@
 .header {
     position: relative;
-    background-color: $background-main;
+    z-index: 10;
+    background-color: transparent;
   }
   
   .logo {
