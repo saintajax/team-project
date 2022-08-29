@@ -445,7 +445,10 @@
   background-color: transparent;
   cursor: pointer;
 }
-
+.card-set__btn:hover,
+.card-set__btn:focus {
+  fill: $btn-focus;
+}
 .card-set__front {
   @media screen and (min-width: $min768) {
     width: calc((100% - 32px) / 3);
