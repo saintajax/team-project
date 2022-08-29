@@ -60,28 +60,28 @@
 }
 .card-set__item {
   position: relative;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 280px;
   height: 420px;
   padding: 20px 40px;
   border-radius: 24px;
 
-  @media screen and (min-width: 400px) {
-    height: 450px;
-  }
-  @media screen and (min-width: 480px) {
-    height: 490px;
-  }
-
   @media screen and (min-width: $min768) {
+    width: 224px;
     height: 428px;
     padding-left: 12px;
     padding-right: 12px;
   }
   @media screen and (min-width: $min768) and (max-width: $max1200) {
     border-radius: 15px;
+    margin: 0;
   }
 
   @media screen and (min-width: $min1200) {
+    width: 368px;
     height: 535px;
     padding-top: 32px;
     padding-left: 34px;
@@ -91,7 +91,7 @@
 
   &::before,
   &::after {
-    display: flex;
+    content: '';
     border-radius: 50%;
     width: 199px;
     height: 196px;
@@ -105,33 +105,20 @@
   }
 
   &::before {
-    margin-top: -60%;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-
-    @media screen and (min-width: 355px) {
-      margin-top: -50%;
-    }
-    @media screen and (min-width: 425px) {
-      margin-top: -35%;
-    }
-
-    @media screen and (min-width: $min768) {
-      margin-top: -60%;
-    }
+    position: absolute;
+    border-radius: 50%;
+    width: 199px;
+    height: 196px;
 
     @media screen and (min-width: $min1200) {
-      margin-top: -60%;
-      margin-bottom: 32px;
+      width: 300px;
+      height: 300px;
+      background-size: 300px;
     }
   }
 
   &::after {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
 
     background-repeat: no-repeat;
   }
@@ -160,7 +147,14 @@
 
   &::before {
     content: '';
-    top: -50%;
+    position: absolute;
+
+    top: -22%;
+
+    @media screen and (min-width: $min1200) {
+      top: -28%;
+    }
+
     background-color: #aec6a5;
     background-image: linear-gradient(
         0deg,
@@ -173,14 +167,15 @@
 
   &::after {
     content: '';
-    top: -5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: -27%;
+
+    @media screen and (min-width: $min1200) {
+      top: -33%;
+    }
+
     background-image: url(../images/products1-mob.jpg);
 
-    @media screen and (min-width: 375px) and (max-width: 450px) {
-      top: -7%;
-    }
     @media screen and (min-width: $min768) {
       background-image: url(../images/products1-tablet.jpg);
     }
@@ -225,6 +220,13 @@
 
   &::before {
     content: '';
+    position: absolute;
+
+    top: -22%;
+
+    @media screen and (min-width: $min1200) {
+      top: -28%;
+    }
     background-color: #efd478;
     background-image: linear-gradient(
         0deg,
@@ -237,9 +239,11 @@
 
   &::after {
     content: '';
-    top: -5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: -27%;
+    @media screen and (min-width: $min1200) {
+      top: -33%;
+    }
 
     background-image: url(../images/products2-mob.jpg);
 
@@ -287,6 +291,11 @@
 
   &::before {
     content: '';
+    position: absolute;
+    top: -22%;
+    @media screen and (min-width: $min1200) {
+      top: -28%;
+    }
     background-color: $font-brown;
     background-image: linear-gradient(
         0deg,
@@ -298,12 +307,15 @@
   }
 
   &::after {
-    content: ''; 
-    top: -5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url(../images/products3-mob.jpg);
+    content: '';
+    position: absolute;
+    top: -27%;
 
+    @media screen and (min-width: $min1200) {
+      top: -33%;
+    }
+
+    background-image: url(../images/products3-mob.jpg);
 
     @media screen and (min-width: $min768) {
       background-image: url(../images/products3-tablet.jpg);
@@ -344,9 +356,26 @@
     }
   }
 }
+
+.card__face {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  height: 400px;
+
+  @media screen and (min-width: $min1200) {
+    width: 241px;
+    height: 500px;
+  }
+}
+
 .card-set__title {
-  margin-top: 0;
+  margin-top: 130px;
   margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
 
   font-style: normal;
   font-size: 20px;
@@ -356,47 +385,44 @@
 
   color: $font-secondary-color;
 
-  @media screen and (min-width: 480px) {
-    font-size: 25px;
-  }
-
   @media screen and (min-width: $min1200) {
+    margin-top: 180px;
     margin-bottom: 65px;
 
     font-size: 30px;
   }
 }
 .card-set__text {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
+  margin-bottom: auto;
   margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  width: 200px;
 
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.76;
   text-align: center;
 
   color: $font-secondary-color;
 
-  @media screen and (min-width: 400px) {
-    font-size: 18px;
-  }
   @media screen and (min-width: $min768) {
     font-size: 14px;
   }
 
   @media screen and (min-width: $min1200) {
-    max-width: 241px;
+    width: 241px;
     font-size: 16px;
   }
 }
 .card-set__btn {
-  position: absolute;
-  justify-content: center;
+  display: block;
+  // position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  bottom: 0px;
+
   width: 60px;
-  left: 50%;
-  bottom: 9px;
-  transform: translateX(-50%);
 
   padding: 5px;
   border: none;
@@ -404,6 +430,7 @@
   background-color: transparent;
   cursor: pointer;
 }
+
 .card-set__front {
   @media screen and (min-width: $min768) {
     width: calc((100% - 32px) / 3);
@@ -433,10 +460,58 @@
 .card-set__front {
   transform: perspective(600px) rotateY(0deg);
 }
+
+.card-set__front.is-flipped {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card-set__front.is-flipped2 {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card-set__front.is-flipped3 {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
 .card-set__back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
 }
+
+.card-set__back.is-flipped {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.card-set__back.is-flipped2 {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.card-set__back.is-flipped3 {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.card {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__face {
+  position: absolute;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
 // .card-set__front {
 //   transform: perspective(600px) rotateY(180deg);
 // }
@@ -446,9 +521,7 @@
 .card-set__btn--front:hover .card-set__front {
   transform: perspective(600px) rotateY(-180deg);
 }
-.card-set__btn--front:hover .card-set__back {
-  transform: perspective(600px) rotateY(0deg);
-}
+
 // .card-set__btn--back .card-set__back {
 //   transform: perspective(600px) rotateY(0deg);
 // }
