@@ -1,4 +1,6 @@
+
 <section class="section contacts" >
+
   <div class="conteiner">
     <h2 class="visually-hidden">Contacts</h2>
     <ul class="contacts__list list" id="contacts">
@@ -127,15 +129,27 @@
       </li>
     </ul>
     <div class="contacts__wrapper">
-      <button class="button contacts--button" data-action="modal-open-address">
-        Our Locations <span class="arrow">&#10095</span> 
+      <button
+        class="button contacts--button"
+        type="button"
+        data-action="modal-open-address"
+        id="btn-map"
+      >
+        Our Locations
+        <svg class="button__icon" width="20" height="20">
+          <use href="./images/sprite.svg#chevron"></use>
+        </svg>
       </button>
 
       <button
         class="button-transp contacts__button-transp"
+        type="button"
         data-action="modal-open-franchise"
       >
-        Franchise <span class="arrow">&#10095</span>
+        Franchise
+        <svg class="button__icon" width="20" height="20">
+          <use href="./images/sprite.svg#chevron"></use>
+        </svg>
       </button>
     </div>
   </div>

@@ -47,12 +47,14 @@
         aria-controls="menu-container"
         aria-expanded="false"
         id="btn-open"
-        data-menu-button>
+        data-menu-button
+      >
         <svg
           class="icon-svg"
           width="32"
           height="32"
-          aria-label="Mobile menu switch ">
+          aria-label="Mobile menu switch "
+        >
           <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
           <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
         </svg>
@@ -60,19 +62,21 @@
       <div class="nav-menu" id="menu-container" data-menu>
         <ul class="nav-menu__list list">
           <li class="nav-menu__item">
-            <a class="nav-menu__link link" href="./index.html">Home</a>
+
+            <a class="nav-menu__link link" href="#">Home</a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link link" href="./index.html#about">About us</a>
+            <a class="nav-menu__link link" href="about">About us</a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link link" href="./index.html#about">How it’s made?</a>
+            <a class="nav-menu__link link" href="advantages">How it’s made?</a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link link" href="./index.html#products">Our products</a>
+            <a class="nav-menu__link link" href="products">Our products</a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link link" href="./index.html#contacts">Contact</a>
+            <a class="nav-menu__link link" href="contacts">Contact</a>
+
           </li>
         </ul>
       </div>
@@ -80,10 +84,14 @@
         class="button button--header js-open-modal"
         type="button"
         id="btn-buy"
-        data-modal="header">Buy now
-        <span class="arrow">
-          &#10095
-        </span>
+
+        data-modal="header"
+      >
+        Buy now
+        <svg class="button__icon" width="20" height="20">
+          <use href="./images/sprite.svg#chevron"></use>
+        </svg>
+
       </button>
     </nav>
   </div>
