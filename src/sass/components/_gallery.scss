@@ -109,18 +109,24 @@
   background-color: $background-main;
 }
 
+.gradient {
+}
+
 .review__text {
+  display: block;
   margin: 0;
   font-size: 12px;
   line-height: 2.58;
 
   @media screen and (max-width: 767px) {
-    display: inline;
-
-    background: linear-gradient(to left, yellow, yellow);
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-    background-position: bottom;
+    background-image: linear-gradient(
+        to bottom,
+        $background-main 5px,
+        transparent 2px
+      ),
+      linear-gradient(to bottom, #fcfcfc 1px, transparent 1px);
+    background-repeat: repeat;
+    background-size: 100% 100px, 100% 30px;
   }
 
   @media screen and (min-width: 768px) {
