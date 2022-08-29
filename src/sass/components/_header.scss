@@ -1,3 +1,42 @@
+#button {
+  display: inline-block;
+  background-color: $btn-primary;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: '\21D1';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: $font-secondary-black;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: $btn-focus;
+}
+#button:active {
+  background-color: $btn-active;
+}
+#button.show {
+  opacity: 0.7;
+  visibility: visible;
+}
+
+// Header
+
 .header {
   position: relative;
   background-color: $background-main;
