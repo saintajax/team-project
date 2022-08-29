@@ -1,10 +1,6 @@
 #button {
   display: inline-block;
-  background-color: $btn-primary;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50%;
+  cursor: pointer;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -15,23 +11,8 @@
   visibility: hidden;
   z-index: 1000;
 }
-#button::after {
-  content: '\21D1';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: $font-secondary-black;
-}
-#button:hover {
-  cursor: pointer;
-  background-color: $btn-focus;
-}
-#button:active {
-  background-color: $btn-active;
-}
 #button.show {
-  opacity: 0.7;
+  opacity: 1;
   visibility: visible;
 }
 
