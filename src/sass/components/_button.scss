@@ -21,6 +21,8 @@
   border-radius: 10px;
   border: 2px solid $btn-primary;
 
+  transition: 250ms linear;
+
   &:hover {
     background-color: $btn-focus;
     border: 2px solid $btn-focus;
@@ -73,6 +75,8 @@
   border-radius: 10px;
   border: 2px solid $btn-primary;
 
+  transition: 250ms linear;
+
   &:hover {
     border: 2px solid $btn-focus;
   }
@@ -95,5 +99,56 @@
     line-height: 1.25;
     min-width: 161px;
     min-height: 50px;
+  }
+}
+
+.button__icon {
+  margin-left: 10px;
+  fill: currentColor;
+  @media screen and (max-width: 767px) {
+    margin-left: 2px;
+  }
+}
+
+.btn-hero {
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.125;
+  color: $font-secondary-black;
+  border: 2px solid $btn-primary;
+  border-radius: 10px;
+
+  transition: 250ms linear;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $btn-focus;
+  }
+
+  &:active {
+    border: 2px solid $btn-active;
+  }
+
+  &--none-border {
+    border: none;
+    color: $btn-primary;
+    transition: 250ms linear;
+    &:hover,
+    &:focus {
+      color: $btn-focus;
+      border: none;
+    }
+
+    &:active {
+      color: $btn-active;
+      border: none;
+    }
+  }
+  @media screen and(min-width:1200px) {
+    padding: 12px 36px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
   }
 }

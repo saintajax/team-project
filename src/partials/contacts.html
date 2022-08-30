@@ -1,7 +1,9 @@
-<section class="section contacts" id="contacts">
+
+<section class="section contacts" >
+
   <div class="conteiner">
     <h2 class="visually-hidden">Contacts</h2>
-    <ul class="contacts__list list">
+    <ul class="contacts__list list" id="contacts">
       <li class="contacts__item" data-aos="flip-left">
         <span class="contacts__agency">CAFE</span>
         <div class="contacts__wrap">
@@ -18,11 +20,11 @@
         <ul class="contacts-schedule__list list">
           <li class="contacts-schedule__item">
             <p class="contacts-schedule__text">Monday - Friday</p>
-            <p class="contacts-schedule__time">06:00 AM - 10:00 PM</p>
+            <time class="contacts-schedule__time">06:00 AM - 10:00 PM</time>
           </li>
           <li class="contacts-schedule__item">
             <p class="contacts-schedule__text">Saturday - Sunday</p>
-            <p class="contacts-schedule__time">08:00 AM - 16:00 PM</p>
+            <time class="contacts-schedule__time">08:00 AM - 16:00 PM</time>
           </li>
         </ul>
 
@@ -59,11 +61,11 @@
         <ul class="contacts-schedule__list list">
           <li class="contacts-schedule__item">
             <p class="contacts-schedule__text">Monday - Friday</p>
-            <p class="contacts-schedule__time">06:00 AM - 10:00 PM</p>
+            <time class="contacts-schedule__time">06:00 AM - 10:00 PM</ti>
           </li>
           <li class="contacts-schedule__item">
             <p class="contacts-schedule__text">Saturday - Sunday</p>
-            <p class="contacts-schedule__time">08:00 AM - 16:00 PM</p>
+            <time class="contacts-schedule__time">08:00 AM - 16:00 PM</t>
           </li>
         </ul>
 
@@ -100,11 +102,11 @@
         <ul class="contacts-schedule__list list">
           <li class="contacts-schedule__item">
             <p class="contacts-schedule__text">Monday - Friday</p>
-            <p class="contacts-schedule__time">06:00 AM - 10:00 PM</p>
+            <time class="contacts-schedule__time">06:00 AM - 10:00 PM</time>
           </li>
           <li class="contacts-schedule__item">
             <p class="contacts-schedule__text">Saturday - Sunday</p>
-            <p class="contacts-schedule__time">08:00 AM - 16:00 PM</p>
+            <time class="contacts-schedule__time">08:00 AM - 16:00 PM</time>
           </li>
         </ul>
 
@@ -127,15 +129,27 @@
       </li>
     </ul>
     <div class="contacts__wrapper">
-      <button class="button contacts--button" data-action="modal-open-address">
-        Our Locations <span class="arrow">&#10095</span> 
+      <button
+        class="button contacts--button"
+        type="button"
+        data-action="modal-open-address"
+        id="btn-map"
+      >
+        Our Locations
+        <svg class="button__icon" width="20" height="20">
+          <use href="./images/sprite.svg#chevron"></use>
+        </svg>
       </button>
 
       <button
         class="button-transp contacts__button-transp"
+        type="button"
         data-action="modal-open-franchise"
       >
-        Franchise <span class="arrow">&#10095</span>
+        Franchise
+        <svg class="button__icon" width="20" height="20">
+          <use href="./images/sprite.svg#chevron"></use>
+        </svg>
       </button>
     </div>
   </div>
