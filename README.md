@@ -1,6 +1,6 @@
 Our Team:
 
-@ShcherbatayaLuna - git;
+@ShcherbatayaLuna
 
 @ArturMand - git;
 
