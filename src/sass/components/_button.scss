@@ -21,6 +21,8 @@
   border-radius: 10px;
   border: 2px solid $btn-primary;
 
+  transition: 250ms linear;
+
   &:hover {
     background-color: $btn-focus;
     border: 2px solid $btn-focus;
@@ -73,6 +75,8 @@
   border-radius: 10px;
   border: 2px solid $btn-primary;
 
+  transition: 250ms linear;
+
   &:hover {
     border: 2px solid $btn-focus;
   }
@@ -101,7 +105,7 @@
 .button__icon {
   margin-left: 10px;
   fill: currentColor;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     margin-left: 2px;
   }
 }
@@ -115,6 +119,8 @@
   border: 2px solid $btn-primary;
   border-radius: 10px;
 
+  transition: 250ms linear;
+
   &:hover,
   &:focus {
     border: 2px solid $btn-focus;
@@ -127,6 +133,7 @@
   &--none-border {
     border: none;
     color: $btn-primary;
+    transition: 250ms linear;
     &:hover,
     &:focus {
       color: $btn-focus;

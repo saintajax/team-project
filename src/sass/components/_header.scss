@@ -1,5 +1,4 @@
 .header {
-
   position: absolute;
   top: 0;
   left: 50%;
@@ -7,7 +6,6 @@
   transform: translateX(-50%);
   z-index: 10;
   background-color: transparent;
-
 }
 
 .logo {
@@ -108,7 +106,6 @@
 
 .nav-menu {
   @media screen and(max-width:1199px) {
-
     position: absolute;
 
     top: 0;
@@ -119,24 +116,21 @@
     z-index: 10;
     // overflow-x: hidden;
 
-
     transform: translate(-100%);
 
     transition: 750ms cubic-bezier(0.4, 0, 0.2, 1);
     &.is-open {
       display: flex;
+      position: fixed;
       flex-direction: column;
       justify-content: space-between;
       transform: translateX(0);
     }
     @media screen and(max-width:767px) {
-
       padding-top: 84px;
-
     }
     @media screen and(min-width:768px) and(max-width:1199px) {
       padding-top: 120px;
-
     }
     @media screen and(min-width:768px) and(max-width:1199px) and(max-height:415px) {
       padding-top: 61px;
@@ -149,7 +143,6 @@
     }
   }
   @media screen and(min-width: 1200px) {
-
     margin-left: auto;
   }
   &__list {
@@ -176,6 +169,7 @@
   }
 
   &__item {
+    transition: color 250ms linear;
     &:hover,
     &:active {
       color: $font-secondary-black;
@@ -190,23 +184,21 @@
   &__link {
     color: inherit;
     display: inline-flex;
-    
+
     @media screen and(max-width:767px) {
       padding: 16px 0;
     }
     @media screen and(min-width:768px) and(max-width:1199px) {
-
       padding: 20px 0;
     }
     @media screen and(max-height:415px) {
       font-size: 32px;
       padding: 13px 0;
-
     }
     @media screen and(max-height:319px) {
       font-size: 32px;
     }
-    @media screen and(min-width:1200px){
+    @media screen and(min-width:1200px) {
       padding: 35px 0;
     }
   }
@@ -228,7 +220,6 @@
   @media screen and(min-width:1200px) {
     margin-left: 146px;
   }
-
 }
 
 .button__vector {

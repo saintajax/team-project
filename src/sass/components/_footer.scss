@@ -108,6 +108,7 @@
   border-radius: 50%;
 
   background-color: $btn-primary;
+  transition: 250ms linear;
 
   @media screen and (min-width: $min1200) {
     width: 34px;
@@ -149,6 +150,7 @@
 }
 .address__phone {
   color: $font-main-color;
+  transition: color 250ms linear;
 }
 .address__phone:hover,
 .address__phone:focus {
