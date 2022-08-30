@@ -1,9 +1,9 @@
 Our Team:
 
-@ShcherbatayaLuna
+@ShcherbatayaLuna;
 
-@ArturMand - git;
+@ArturMand;
 
-@ian2024 - git;
+@ian2024;
 
-@YuliiaKulish - git;
+@YuliiaKulish.
