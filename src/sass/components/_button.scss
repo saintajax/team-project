@@ -101,6 +101,9 @@
 .button__icon {
   margin-left: 10px;
   fill: currentColor;
+  @media screen and (max-width: 480px) {
+    margin-left: 2px;
+  }
 }
 
 .btn-hero {
