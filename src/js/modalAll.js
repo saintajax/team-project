@@ -28,7 +28,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const modalButtons = document.querySelectorAll('.js-open-modal'),
     overlay = document.querySelector('.js-overlay-modal'),
-    closeButtons = document.querySelectorAll('.js-modal-close');
+    closeButtons = document.querySelectorAll('.js-modal-close'),
+    bodyscroll = document.querySelector('.data-body');
 
   modalButtons.forEach(function (item) {
     item.addEventListener('click', function (e) {
@@ -41,15 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       modalElem.classList.add('active');
       overlay.classList.add('active');
-      if(
-        overlay.classList.contains("active")){
-          document.body.style.overflow = 'hidden';
-        }else {
-          document.body.style.overflow = 'visible';
-        }
+      bodyscroll.classList.add('lock');
     });
   });
-
   closeButtons.forEach(function (item) {
     item.addEventListener('click', function (e) {
       const parentModal = this.closest('.modal');
@@ -57,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
     });
-    
   });
 
   document.body.addEventListener(
@@ -68,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (key == 27) {
         document.querySelector('.modal.active').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
+        document.querySelector('.data-body').classList.remove('lock');
       }
     },
     false
@@ -76,5 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.addEventListener('click', function () {
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
+    document.querySelector('.data-body').classList.remove('lock');
   });
 });
