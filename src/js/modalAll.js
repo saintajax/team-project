@@ -55,20 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.body.addEventListener(
-    'keyup',
-    function (e) {
-      const key = e.keyCode;
-
-      if (key == 27) {
-        document.querySelector('.modal.active').classList.remove('active');
-        document.querySelector('.overlay').classList.remove('active');
-        document.querySelector('.data-body').classList.remove('lock');
-      }
-    },
-    false
-  );
-
   overlay.addEventListener('click', function () {
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
