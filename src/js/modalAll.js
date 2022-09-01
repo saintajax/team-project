@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
+      document.querySelector('.data-body').classList.remove('lock');
     });
   });
 
