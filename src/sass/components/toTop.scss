@@ -1,5 +1,11 @@
 #button {
-  display: inline-block;
+  // display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
   cursor: pointer;
   position: fixed;
   bottom: 100px;
@@ -14,5 +20,5 @@
 }
 
 #button:hover {
-  color: $btn-focus;
+  background-color: rgba($color: #000000, $alpha: .1);
 }
