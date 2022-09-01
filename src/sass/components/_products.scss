@@ -67,11 +67,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin: 0 auto;
   width: 280px;
   height: 420px;
   padding: 20px 40px;
   border-radius: 24px;
+
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
 
   @media screen and (min-width: $min768) {
     width: 224px;
@@ -93,9 +97,20 @@
     padding-bottom: 60px;
   }
 
+  &.is-flipped {
+    transform: rotateY(-180deg);
+  }
+  &:hover,
+  &:focus {
+    & .card-set__btn {
+      fill: $btn-focus;
+      scale: 1.2;
+    }
+  }
   &::before,
   &::after {
     content: '';
+    position: absolute;
     border-radius: 50%;
     width: 199px;
     height: 196px;
@@ -108,22 +123,7 @@
     }
   }
 
-  &::before {
-    position: absolute;
-    border-radius: 50%;
-    width: 199px;
-    height: 196px;
-
-    @media screen and (min-width: $min1200) {
-      width: 300px;
-      height: 300px;
-      background-size: 300px;
-    }
-  }
-
   &::after {
-    position: absolute;
-
     background-repeat: no-repeat;
   }
 }
@@ -142,17 +142,12 @@
   @media screen and (min-width: $min768) {
     margin-top: 0;
   }
-  @media screen and (min-width: $min1200) {
-    margin-top: 0;
-  }
 }
 .card-set__item--first {
   background-color: #aec6a5;
 
   &::before {
     content: '';
-    position: absolute;
-
     top: -22%;
 
     @media screen and (min-width: $min1200) {
@@ -171,7 +166,6 @@
 
   &::after {
     content: '';
-    position: absolute;
     top: -27%;
 
     @media screen and (min-width: $min1200) {
@@ -224,8 +218,6 @@
 
   &::before {
     content: '';
-    position: absolute;
-
     top: -22%;
 
     @media screen and (min-width: $min1200) {
@@ -243,7 +235,6 @@
 
   &::after {
     content: '';
-    position: absolute;
     top: -27%;
     @media screen and (min-width: $min1200) {
       top: -33%;
@@ -295,7 +286,6 @@
 
   &::before {
     content: '';
-    position: absolute;
     top: -22%;
     @media screen and (min-width: $min1200) {
       top: -28%;
@@ -312,7 +302,6 @@
 
   &::after {
     content: '';
-    position: absolute;
     top: -27%;
 
     @media screen and (min-width: $min1200) {
@@ -374,17 +363,6 @@
   }
 }
 
-// .card__face--back {
-//   width: 100%;
-//   height: 100%;
-//   padding-top: 0;
-//   background-image: linear-gradient(
-//     to bottom,
-//     rgba(0, 0, 0, 0.1),
-//     rgba(0, 0, 0, 0.2)
-//   );
-// }
-
 .card-set__title {
   margin-top: 130px;
   margin-bottom: 40px;
@@ -431,7 +409,6 @@
 }
 .card-set__btn {
   display: block;
-  // position: absolute;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
@@ -445,111 +422,16 @@
   background-color: transparent;
   cursor: pointer;
 }
-.card-set__btn:hover,
-.card-set__btn:focus {
-  fill: $btn-focus;
+.card-set__btn--back {
+  transform: rotate(180deg);
 }
-.card-set__front {
-  @media screen and (min-width: $min768) {
-    width: calc((100% - 32px) / 3);
-  }
-
-  @media screen and (min-width: $min1200) {
-    width: calc((100% - 64px) / 3);
-  }
-}
-.card-set__back {
-  max-width: 450px;
-
-  @media screen and (min-width: $min768) {
-    width: 227px;
-  }
-
-  @media screen and (min-width: $min1200) {
-    width: 368px;
-  }
-}
-.card-set__front,
-.card-set__back {
-  backface-visibility: hidden;
-
-  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.card-set__front {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.card-set__front.is-flipped {
-  transform: perspective(600px) rotateY(-180deg);
-}
-
-.card-set__back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-}
-
-.card-set__back.is-flipped {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.card-set__back.is-flipped2 {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.card-set__back.is-flipped3 {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.card {
-  transition: transform 1s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
 .card__face {
   position: absolute;
 
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
-
 .card__face--back {
   transform: rotateY(180deg);
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-set__btn--front:hover .card-set__front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-
-.card-set__item--first.card-set__back {
-  @media screen and (max-width: $max768) {
-    top: 15%;
-  }
-}
-.card-set__item--second.card-set__back {
-  @media screen and (max-width: $max768) {
-    top: 83%;
-  }
-  @media screen and (min-width: $min768) {
-    right: 38.2%;
-  }
-  @media screen and (min-width: $min1200) {
-    right: 37%;
-  }
-}
-.card-set__item--third.card-set__back {
-  @media screen and (max-width: $max768) {
-    top: 153%;
-  }
-  @media screen and (min-width: $min768) {
-    left: 64.9%;
-  }
-  @media screen and (min-width: $min1200) {
-    left: 65%;
-  }
 }
