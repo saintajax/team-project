@@ -1,4 +1,4 @@
-const mediaDesktop = window.matchMedia('(min-width: 1200px)');
+const mediaDesktop = window.matchMedia('(min-width: 1365px)');
 const mediaTablet = window.matchMedia('(max-width: 1199px)');
 
 if (mediaDesktop.matches) {
