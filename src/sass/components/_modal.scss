@@ -48,6 +48,12 @@
   @media screen and(min-width: 1200px) {
     width: 528px;
   }
+  &__opened{
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+  }
 }
 
 /* close button  */

@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:wght@700&family=Roboto:wght@400;500;700&family=Seymour+One&display=swap');
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   // background-color: $background-main;
   color: $font-main-color;
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.04em;
   margin: 0;
-  &.is-left {
+  &.lock {
     overflow: hidden;
   }
 }
