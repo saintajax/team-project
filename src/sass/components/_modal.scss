@@ -1,18 +1,19 @@
 /* modal  */
 .modal {
   position: absolute;
+  padding: 28px 28px;
   opacity: 0;
   visibility: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 95%;
-  height: unset;
+
   z-index: 30;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 10px;
   transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and(max-height:710px) {
@@ -36,16 +37,11 @@
   }
 
   @media screen and(min-width: 480px) {
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    transform: translate(-50%, 0);
     width: 450px;
   }
-  @media screen and(min-width: 480px) and (max-height: 899px) {
-    top: 100px;
-  }
+
   @media screen and(min-width: 1200px) {
+    padding: 32px 60px;
     width: 568px;
   }
 }
@@ -81,7 +77,6 @@
 
 // Стили для модального окна Header
 .client-form {
-  padding: 40px;
   display: flex;
   flex-direction: column;
   &__title {
@@ -166,7 +161,7 @@
 }
 
 .client-form__label-policy {
-  display: inline-flex;
+  padding: 0;
   align-items: center;
   margin-bottom: 30px;
   font-weight: 500;
@@ -210,13 +205,6 @@
   border-radius: 10px;
 }
 
-.modal-info {
-  padding: 28px;
-  @media screen and (min-width: 1200px) {
-    padding: 32px 60px;
-  }
-}
-
 .modal-info__title {
   margin: 0;
   margin-bottom: 12px;
@@ -249,7 +237,11 @@
 
 .about__iframe {
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 32px;
+  }
 }
 
 // modal map
@@ -276,7 +268,7 @@
 
   &__title {
     padding: 0;
-    margin: 0 0 32px 0;
+    margin: 0 0 20px 0;
     font-family: 'Seymour One', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -287,13 +279,21 @@
       font-size: 20px;
       line-height: 1.4;
     }
+
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 32px 0;
+    }
   }
 
   &__location {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     width: 100%;
     height: 100%;
     border-radius: 10px;
+
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 32px 0;
+    }
   }
 
   &__button {
@@ -308,7 +308,10 @@
   display: flex;
   align-items: center;
   text-align: center;
+  margin-top: 0px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
   max-width: 322px;
 
@@ -328,6 +331,7 @@
   }
 }
 .franchise__text {
+  margin-top: 0px;
   margin-bottom: 24px;
 
   font-size: 14px;
@@ -351,7 +355,7 @@
   padding: 8px 11px;
   border: 1px solid $background-main;
   border-radius: 10px;
-  margin-top: 12px;
+  margin-bottom: 12px;
 
   font-size: 12px;
   line-height: 1.4;
@@ -361,8 +365,7 @@
 
   @media screen and (min-width: 568px) {
     padding: 11px 16px;
-    margin-top: 16px;
-    
+
     font-size: 14px;
   }
 
